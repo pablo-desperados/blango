@@ -4,6 +4,7 @@ from blog.models import Tag, Post, Comment
 admin.site.register(Tag)
 
 class PostAdmin(admin.ModelAdmin):
-    fields = ('slug','published_at')
+    fields = ('author','published_at','title','slug','summary','content')
+
 admin.site.register(Post,PostAdmin)
 admin.site.register(Comment)
